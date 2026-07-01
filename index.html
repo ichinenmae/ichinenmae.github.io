@@ -167,10 +167,20 @@
       border-bottom: 1px solid var(--color-border);
     }
 
+    .title-link {
+      display: block;
+      border-radius: 8px;
+    }
+
+    .title-link:focus-visible {
+      outline: 3px solid #a5d6a7;
+      outline-offset: 2px;
+    }
+
     .title-image {
       width: 100%;
       aspect-ratio: 4 / 1;
-      object-fit: cover;
+      object-fit: contain;
       background: #f5f5f5;
       border-radius: 8px;
     }
@@ -226,7 +236,7 @@
     .preview img {
       width: 100%;
       aspect-ratio: 390 / 844;
-      object-fit: cover;
+      object-fit: contain;
       object-position: top center;
       background: var(--color-surface);
     }
@@ -295,31 +305,11 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .app-card.featured {
-        grid-column: 1 / -1;
-        display: grid;
-        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-      }
-
-      .app-card.featured .title-image-wrap {
-        border-bottom: 0;
-        border-right: 1px solid var(--color-border);
-      }
-
-      .app-card.featured .title-image {
-        height: 100%;
-        min-height: 310px;
-        aspect-ratio: auto;
-      }
     }
 
     @media (min-width: 980px) {
       .app-list {
         grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .app-card.featured {
-        grid-column: span 3;
       }
     }
   </style>
@@ -348,7 +338,9 @@
     <section class="app-list" aria-label="アプリ一覧">
       <article class="app-card featured" style="--accent:#4caf50">
         <div class="title-image-wrap">
-          <img class="title-image" src="sumureco/title-image.png" alt="スムレコのタイトル画像">
+          <a class="title-link" href="sumureco/" aria-label="スムレコを開く">
+            <img class="title-image" src="sumureco/title-image.png" alt="スムレコのタイトル画像">
+          </a>
         </div>
         <div class="app-body">
           <div class="app-heading">
@@ -368,7 +360,9 @@
 
       <article class="app-card" style="--accent:#2e7d32">
         <div class="title-image-wrap">
-          <img class="title-image" src="sumureco/title-image.png" alt="配達ペースチェッカーのタイトル画像">
+          <a class="title-link" href="sumureco/preview.html" aria-label="配達ペースチェッカーを開く">
+            <img class="title-image" src="sumureco/title-image.png" alt="配達ペースチェッカーのタイトル画像">
+          </a>
         </div>
         <div class="app-body">
           <div class="app-heading">
@@ -387,7 +381,9 @@
 
       <article class="app-card" style="--accent:#00a86b">
         <div class="title-image-wrap">
-          <img class="title-image" src="sumucopy/title-image.png" alt="スムコピのタイトル画像">
+          <a class="title-link" href="sumucopy/" aria-label="スムコピを開く">
+            <img class="title-image" src="sumucopy/title-image.png" alt="スムコピのタイトル画像">
+          </a>
         </div>
         <div class="app-body">
           <div class="app-heading">
@@ -406,7 +402,9 @@
 
       <article class="app-card" style="--accent:#0f766e">
         <div class="title-image-wrap">
-          <img class="title-image" src="portal-assets/title-sumuquest.png" alt="スムクエのタイトル画像">
+          <a class="title-link" href="quest-simulator/" aria-label="スムクエを開く">
+            <img class="title-image" src="portal-assets/title-sumuquest.png" alt="スムクエのタイトル画像">
+          </a>
         </div>
         <div class="app-body">
           <div class="app-heading">
@@ -425,7 +423,9 @@
 
       <article class="app-card" style="--accent:#1f7a4c">
         <div class="title-image-wrap">
-          <img class="title-image" src="sumusale/assets/sumusales.png" alt="スムセルのタイトル画像">
+          <a class="title-link" href="sumusale/" aria-label="スムセルを開く">
+            <img class="title-image" src="sumusale/assets/sumusales.png" alt="スムセルのタイトル画像">
+          </a>
         </div>
         <div class="app-body">
           <div class="app-heading">
@@ -444,7 +444,9 @@
 
       <article class="app-card" style="--accent:#4caf50">
         <div class="title-image-wrap">
-          <img class="title-image" src="sumucal/title_image.png" alt="スムカルのタイトル画像">
+          <a class="title-link" href="sumucal/" aria-label="スムカルを開く">
+            <img class="title-image" src="sumucal/title_image.png" alt="スムカルのタイトル画像">
+          </a>
         </div>
         <div class="app-body">
           <div class="app-heading">
@@ -463,7 +465,9 @@
 
       <article class="app-card" style="--accent:#ff00cc">
         <div class="title-image-wrap">
-          <img class="title-image" src="portal-assets/title-samurai-cat-no40.png" alt="SAMURAI CAT No.40のタイトル画像">
+          <a class="title-link" href="CATSAMURAI40/" aria-label="SAMURAI CAT No.40を開く">
+            <img class="title-image" src="portal-assets/title-samurai-cat-no40.png" alt="SAMURAI CAT No.40のタイトル画像">
+          </a>
         </div>
         <div class="app-body">
           <div class="app-heading">
