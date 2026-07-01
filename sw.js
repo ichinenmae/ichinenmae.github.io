@@ -1,4 +1,4 @@
-const CACHE_NAME = "smdelivery-pwa-v1";
+const CACHE_NAME = "smdelivery-pwa-v2";
 
 const APP_SHELL = [
   "/manifest.webmanifest",
@@ -6,6 +6,7 @@ const APP_SHELL = [
   "/sumureco/index.html",
   "/sumureco/smrc-icon.png",
   "/sumureco/smrc-icon-512.png",
+  "/sumureco/sumumeter.png",
   "/sumucopy/index.html",
   "/sumucopy/templates.json",
   "/sumucopy/title-image.png"

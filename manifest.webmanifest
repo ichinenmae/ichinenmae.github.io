@@ -1,7 +1,7 @@
 {
-  "name": "スム配達ツール",
-  "short_name": "スム配達",
-  "description": "ペースメーカーとスムコピをまとめて使う配達補助ツール",
+  "name": "スムメタ SMOOTH METER",
+  "short_name": "スムメタ",
+  "description": "配達ペースチェッカーとスムコピをまとめて使う配達補助ツール",
   "start_url": "/sumureco/preview.html",
   "scope": "/",
   "display": "standalone",
